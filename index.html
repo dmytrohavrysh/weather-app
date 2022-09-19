@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <meta name="theme-color" content="#1c7fc2">
+    <meta name="description" content="Weather App">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="./favicon.png"/>
+    <link rel="apple-touch-icon" href="/favicon.png"/>
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div class="weather">
+        <div class="weather__header">
+            <button type="button" class="weather__button weather__local-weather">Show Local Weather</button>
+            <div class="weather__status">
+                <span class="weather__status__title">Last updated:</span>
+                <p class="weather__status__data">
+                    <span class="weather__status__datetime">2022/08/16 20:23</span>
+                    <button class="weather__update">Update<svg class="weather__update__icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M7 9h-7v-7h1v5.2c1.853-4.237 6.083-7.2 11-7.2 6.623 0 12 5.377 12 12s-5.377 12-12 12c-6.286 0-11.45-4.844-11.959-11h1.004c.506 5.603 5.221 10 10.955 10 6.071 0 11-4.929 11-11s-4.929-11-11-11c-4.66 0-8.647 2.904-10.249 7h5.249v1z"/></svg></button>
+                </p>
+            </div>
+        </div>
+        <input type="search" list="suggestions" class="weather__search" placeholder="Your City">
+        <datalist id="suggestions"></datalist>
+        <div class="weather__today">
+            <div class="weather__details">
+                <h2 class="weather__city">City</h2>
+                <p class="weather__day">Day</p>
+                <div class="weather__current">
+                    <p class="weather__indicator weather__indicator--humidity"><span class="value">50</span>%</p>
+                    <p class="weather__indicator weather__indicator--wind"><span class="value">West, 5</span>m/s</p>
+                    <p class="weather__indicator weather__indicator--pressure"><span class="value">1050</span>hPa</p>
+                </div>
+            </div>
+            <picture class="weather__picture">
+                <source srcset="images/clear-sky.webp" type="image/webp">
+                <source srcset="images/clear-sky.png" type="image/png">
+                <img src="images/clear-sky.png" width="1000" alt="Clear sky" class="weather__image">
+            </picture>
+
+            <div class="weather__temperature"><span class="value">+25</span> &deg;C</div>
+        </div>
+        <div class="weather__forecast">
+            <article class="weather__forecast__item">
+                <picture>
+                    <source srcset="images/clear-sky.webp" type="image/webp">
+                    <source srcset="images/clear-sky.png" type="image/png">
+                    <img src="images/clear-sky.png" width="100" height="100" alt="Clear sky" class="weather__forecast__icon">
+                </picture>
+                <h3 class="weather__forecast__day">Day</h3>
+                <p class="weather__forecast__temperature"><span class="value">+25</span> &deg;C</p>
+            </article>
+            <article class="weather__forecast__item">
+                <picture>
+                    <source srcset="images/clear-sky.webp" type="image/webp">
+                    <source srcset="images/clear-sky.png" type="image/png">
+                    <img src="images/clear-sky.png" width="100" height="100" alt="Clear sky" class="weather__forecast__icon">
+                </picture>
+                <h3 class="weather__forecast__day">Day</h3>
+                <p class="weather__forecast__temperature"><span class="value">+25</span> &deg;C</p>
+            </article>
+            <article class="weather__forecast__item">
+                <picture>
+                    <source srcset="images/clear-sky.webp" type="image/webp">
+                    <source srcset="images/clear-sky.png" type="image/png">
+                    <img src="images/clear-sky.png" width="100" height="100" alt="Clear sky" class="weather__forecast__icon">
+                </picture>
+                <h3 class="weather__forecast__day">Day</h3>
+                <p class="weather__forecast__temperature"><span class="value">+25</span> &deg;C</p>
+            </article>
+            <article class="weather__forecast__item">
+                <picture>
+                    <source srcset="images/clear-sky.webp" type="image/webp">
+                    <source srcset="images/clear-sky.png" type="image/png">
+                    <img src="images/clear-sky.png" width="100" height="100" alt="Clear sky" class="weather__forecast__icon">
+                </picture>
+                <h3 class="weather__forecast__day">Day</h3>
+                <p class="weather__forecast__temperature"><span class="value">+25</span> &deg;C</p>
+            </article>
+            <article class="weather__forecast__item">
+                <picture>
+                    <source srcset="images/clear-sky.webp" type="image/webp">
+                    <source srcset="images/clear-sky.png" type="image/png">
+                    <img src="images/clear-sky.png" width="100" height="100" alt="Clear sky" class="weather__forecast__icon">
+                </picture>
+                <h3 class="weather__forecast__day">Day</h3>
+                <p class="weather__forecast__temperature"><span class="value">+25</span> &deg;C</p>
+            </article>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
